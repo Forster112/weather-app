@@ -24,9 +24,11 @@ wform.addEventListener('submit', (e) => {
       res
         .json()
         .then((data) => {
+          errorpara.innerHTML = ""
           report.innerHTML = `${data.forcast} in ${data.location}`;
         })
         .catch((err) => {
+          report.innerHTML = ""
           errorpara.innerHTML = "Please check your internet or provide a valid location"
         });
     }
