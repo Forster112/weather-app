@@ -18,7 +18,7 @@ wform.addEventListener('submit', (e) => {
   
   const location = locationInput.value;
 
-  fetch(`http://localhost:3000/weather?address=${location}`).then(
+  fetch(`/weather?address=${location}`).then(
     (res) => {
       res
         .json()
